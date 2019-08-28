@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 @font-face {
     font-family: 'Varela Round';
     font-style: normal;
@@ -14,7 +21,8 @@
   
   :root {
     --accent-color: #45494e;
-    --gradient-color: #fbfbfb;
+    --accent-color: #f0f5fc;
+
   }
   
   * {
@@ -48,13 +56,38 @@ outline: 0;
 
 
   }
-  
+.temp{
+  box-shadow: #EA8D8D 50px;
+  border-radius: 7px;
+  background-color: #3c3c3c;
+  height: 400px;
+  width: 400px;
+  position:absolute;
+  left: 650px;
+ 
+}
+p{
+padding: 10px;
+color: #FBFBFB;
+font-weight: bolder;
+}
+  .optic{
+    border-radius: 7px;
+
+    background-color: #3c3c3c;
+    position:absolute;
+    left: 1100px;
+    height: 400px;
+  width: 400px;
+  }
+ 
   body {
-    background: #45494e;
     font-family: "Varela Round", sans-serif;
     margin: 0;
     padding: 40px;
     text-transform: capitalize;
+
+    background-image: none;
   }
   
   .menu {
