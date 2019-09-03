@@ -357,3 +357,13 @@ p{
   display: inline-block;
   width: 70px;
 }
+
+.alert {
+  padding: 20px;
+  background-color: #7cf436;
+  color: white;
+  width: 400px;
+  position: absolute;
+  left: 300px;
+  transition: 1s;
+}

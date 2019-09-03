@@ -22,8 +22,15 @@ function calcular(t, valor) {
         inKe.value = Convercor.fahrenheitToKelvin(temp);
 
 
-    }else{
-        alert("Valor Invalido");
+    }else if(t != NaN){//alert personalizado
+        var body = document.querySelector("#corpo");
+        var alert = document.createElement('div');
+        alert.setAttribute('class', 'alert');
+        alert.appendChild(document.createTextNode("Valor Invalido"));
+        body.appendChild(alert);
+        setTimeout(function(){
+            body.removeChild(alert);
+        }, 3000);
     }
 }
 
