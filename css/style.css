@@ -1,3 +1,4 @@
+ /* fonte independente */ 
 @font-face {
     font-family: 'Varela Round';
     font-style: normal;
@@ -11,24 +12,32 @@
     font-weight: 400;
     src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf) format('truetype');
   }
-  
+   /* fonte independente */ 
   :root {
-    --accent-color: #45494e;
+    --accent-color: #4e4a45;
     --accent-color: #f0f5fc;
 
   }
+
+  
+  
   
   * {
+
     width: 100px;
     box-sizing: border-box;
   }
+  /* menu menu mostrado após passar o mouse */
   .sub-menu{
     padding: 4px;
 left: 4px;
 outline: none;
 font-weight: bolder;
   }
-  
+    /* menu menu mostrado após passar o mouse */
+
+
+    /* botão de limpar */
   button{
     left: 5px;
 border: none;
@@ -36,7 +45,7 @@ background: none;
 border-radius: #3c3c3c solid;
 background-color: none;
 outline: 0;
-
+  
   }
   
   input{
@@ -44,19 +53,21 @@ outline: 0;
     background-color: none;
     background-image: none;
     border: none #3c3c3c;
-border-radius: 5px;
-outline: 0;
+    border-radius: 5px;
+    outline: 0;
 
 
-  }
-  #catinga{
+  } 
+  #any{
     position:absolute;
     left: 240px;
-  padding: 0%;
+    padding: 0%;
     width: 900px;
     height: 400px;
 
   }
+/* div relacionada ao botão "Sobre" */
+
 .temp{
   box-shadow: #EA8D8D 50px;
   border-radius: 7px;
@@ -64,12 +75,15 @@ outline: 0;
   height: 400px;
   width: 400px;
   display: inline-block;
- 
+  
+ /* div relacionada ao botão "Sobre" */
+
+
 }
 p{
-padding: 10px;
-color: #FBFBFB;
-font-weight: bolder;
+  padding: 10px;
+  color: #FBFBFB;
+  font-weight: bolder;
 }
   .optic{
     border-radius: 7px;
@@ -78,8 +92,11 @@ font-weight: bolder;
     width: 400px;
     display: inline-block;
   }
- 
+
+
+ /* div principal */
 #corpo {
+ 
     background-color: rgb(156, 156, 156);
     font-family: "Varela Round", sans-serif;
     margin: 0;
@@ -87,13 +104,29 @@ font-weight: bolder;
     text-transform: capitalize;
     background-image: none;
   }
-  
+   /* div principal */
+
+
+
+   /* primeiro menu geral */
   .menu {
-    border-radius: 30px;
+   
+      border-radius: 30px;
       height: 40px;
       left: 5px;
   }
-  
+     /* primeiro menu geral */
+
+      @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+      }
+
+      .fadeIn {
+      
+        animation: fadeIn 2s ease-in-out;
+        }
+
   .menu > ol {
     list-style: none;
     margin: 30px 0;
@@ -101,6 +134,7 @@ font-weight: bolder;
   }
   
   .menu > ol > li {
+    
     border-radius: 5px;
     background: #3c3c3c;
     border-left: 5px solid var(--gradient-color);
@@ -313,6 +347,7 @@ font-weight: bolder;
 
 
 #buttonReco{
+ 
   position: absolute;
   text-decoration: none;
   color: white;

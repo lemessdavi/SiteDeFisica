@@ -9,7 +9,7 @@ function calcular(t, valor) {
     inCe= document.getElementById('celc');
     inKe= document.getElementById('kelvin');
     inFa= document.getElementById('fare');
-    if(t == 'c'&&temp>=-273.15 ){
+    if(t == 'c'&&temp>=-273.15 ){// Variável t se refere a qual o input que entro o valor
         inKe.value = Convercor.celciusToKelvin(temp);
         inFa.value = Convercor.celciusToFahrenheit(temp);
     }else if(t== 'k'&& temp>=0){
@@ -29,7 +29,7 @@ function calcular(t, valor) {
 
 //fuction para sumir com a esplicação
 function espicOff() {
-    document.getElementById('catinga').setAttribute('style', 'display:none');
+    document.getElementById('any').setAttribute('style', 'display:none');
 }
 
 //mudar o valor dos inputs para vasios

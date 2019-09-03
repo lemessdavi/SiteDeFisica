@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'Varela Round';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Varela Round Regular'), local('VarelaRound-Regular'), url(https://fonts.gstatic.com/s/varelaround/v12/w8gdH283Tvk__Lua32TysjIfp8uK.ttf) format('truetype');
+  }
+  
+  @font-face{
+    font-family: 'Fira Sans';
+    src: url("eot/FiraSans-Regular.eot");
+    src: local("Fira Sans Regular"),
+         url("eot/FiraSans-Regular.eot") format("embedded-opentype"),
+         url("woff/FiraSans-Regular.woff") format("woff"),
+         url("ttf/FiraSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+*{
+  font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* base da lading page, imagem e efeitos */
+.land{
+
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+.land::after{
+
+content: "";
+position:absolute;
+left:0;
+top:0;
+width:100%;
+height: 100%;
+background-image: url(../img/Radio.jpg);
+background-repeat: no-repeat; 
+background-size: cover;
+opacity: 0.2;
+animation: anim 25s infinite;
+}
+/* base da lading page, imagem e efeitos */
+
+@keyframes anim {
+  50%{
+    transform: scale(2);
+  }
+100%{
+  transform: scale(1);
+}
+
+
+
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  }
+
+
+  .fadeIn {
+  
+    animation: fadeIn 3s ease-in-out;
+    }
+/* Botão e estilos referentes */
+.conteudo{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  padding: 0 40px;
+  box-sizing:border-box;
+}
+
+.conteudo h1{
+text-transform: uppercase;
+color: rgb(213, 116, 116);
+font-size: 45px;
+font-weight: 900;
+margin-bottom: 20px;
+text-shadow: #000 2px 2px 3px;
+}
+.conteudo p{
+  font-weight: bolder;
+color: azure;
+margin-bottom: 20px;
+
+}
+
+.conteudo a{
+
+display: inline-block;
+text-decoration: none;
+outline: none;
+color: rgb(213, 116, 116);
+border:2px solid rgb(213, 116, 116);
+padding: 5px;
+text-transform: uppercase;
+transition: 0.4s linear;
+font-size: 18px;
+
+
+}
+
+.conteudo a:hover{
+  color: azure;
+  background-image: linear-gradient(rgb(213, 116, 116), rgb(214, 95, 95)) ;
+  border: 2px solid;
+  border-image-source: linear-gradient(1deg, rgb(226, 136, 104), rgb(213, 112, 75));
+}
+
+/* Botão e estilos referentes */
+
+
+.text{
+
+padding: 10px;
+text-align: justify;
+}
+
