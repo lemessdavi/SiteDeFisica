@@ -22,7 +22,7 @@ function calcular(t, valor) {
         inKe.value = Convercor.fahrenheitToKelvin(temp);
 
 
-    }else if(t != NaN){//alert personalizado
+    }else if(!Number.isNaN(temp)){//alert personalizado e verificação se o valor numero foi inserido para se poder ser dito que o valor é invalido
         var body = document.querySelector("#corpo");
         var alert = document.createElement('div');
         alert.setAttribute('class', 'alert');
