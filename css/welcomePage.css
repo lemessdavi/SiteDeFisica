@@ -18,35 +18,262 @@
 
 
 *{
+
   font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-}
-/* base da lading page, imagem e efeitos */
-.land{
+    box-sizing: border-box;
 
+}
+body{
+  display: flex;
+}
+.container{
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  z-index: 3;
+}
+.open{
+  border: none;
+  margin: 20px;
+  padding: 24px;
+  width: 220px;
+  font-family: 'Montserrat',sans-serif;
+  font-size:15px;
+  text-transform: uppercase;
+  box-shadow:3px 3px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  background-size: 200%;
+  transition: 0.6s;
+  z-index: 3;
+}
+.open1{
+  background-image: linear-gradient(to left,rgba(158, 36, 77, 0.753),rgba(213, 116, 116, 0.753),rgba(141, 31, 31, 0.753));
+  z-index: 3;
+}
+.open:hover{
+  background-position: right;
+}
+.text-anim{
+  color: rgba(213, 116, 116, 0.753);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: none;
+  padding: 0 30px;
+  height: 45px;
+  overflow: hidden;
+}
+.linha{
+  font-family: consolas;
+  text-transform: bolder;
+  text-align: center;
+  font-size: 25px;
+  line-height: 60px;
+}
+.linha:first-child{
+  animation: textinho 12s infinite;
+}
+@keyframes textinho {
+  15%{
+    margin-top: 0;
+  }
+  35%{
+    margin-top: -60px;
+  }
+  55%{
+    margin-top: -120px;
+  }
+  85%{
+    margin-top: -180px;
+  }
+  
+}
+@font-face {
+  font-family: neon;
+  src: url(hellodenverdisplayregular_v1.6.ttf);
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(wall.jpg);
+  background-size: auto 100%;
+}
+
+@font-face {
+  font-family: neon;
+  src: url(hellodenverdisplayregular_v1.6.ttf);
+}
+
+.neon-text {
+  position: absolute;
+  left: 90%;
+  font-family:neon;
+  font-size: 3rem;
+  color: #ffd8d8;
+  text-shadow: 
+  .1vw 0vw .25vw #ffd8d8, .2vw 0vw .25vw #ffd8d8, .4vw 0vw .25vw #ffd8d8, 
+  .1vw 0vw   0vw #f25757, .2vw 0vw   0vw #f25757, .4vw 0vw   0vw #f25757,
+  .1vw 0vw  .1vw #f25757, .2vw 0vw  .1vw #f25757, .4vw 0vw  .1vw #f25757,
+  .1vw 0vw   2vw #f25757, .2vw 0vw   2vw #f25757, .4vw 0vw   2vw #f25757, 
+  .1vw 0vw   1vw #e50b0b, .2vw 0vw   1vw #e50b0b, .4vw 0vw   5vw #e50b0b;
+}
+#mainnav {
+  position: absolute;
+  font-family: 'Roboto Condensed', sans-serif;
+  z-index: 5;
+    
+}
+#mainnav li {
+  margin: 55px 0;
+  left: -550px;
+  position: relative;
+  display: none;
+    
+}
+#mainnav a {
+  color: white;   
+  text-decoration: none;
+  font-size: 1.4em;
+
+      
+
+} 
+ul li{
+  list-style: none;
+  margin-top: -50px;
+  
+}
+.hamb {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2.5em;
+  z-index: 5;
+}
+.hamb a {
+  color: #fff;
+  text-decoration: none;
+}
+.hero {
+  width: 100%;
+  min-height: 600px;
+  background-image:url(testmonial-bg.jpg);
+    background-size: cover;
+}
+#bubble {
+  width: 100%;
+  height: 100%;
+  opacity: 2.0;
+  position: fixed;
+  display: none;
+  z-index: 4;
+  background: rgba(0, 0, 0, .5);
+}
+.contact-info{
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  
+}
+
+
+.card{
+  background:none;
+  padding: 0 20px;
+  margin: 0 10px;
+  width: calc(30% - 20px);
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
+ 
+}
+
+.card-icon{
+  font-size: 28px;
+  background: rgba(213, 116, 116, 0.753);
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px !important;
+  border-radius: 50%;
+  transition: 0.3s linear;
+}
+
+.card:hover .card-icon{
+  background: none;
+  color: rgba(213, 116, 116, 0.753);
+  transform: scale(1.6);
+}
+
+
+.card p{
+  margin-top: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  max-height: 0;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.card:hover p{
+  max-height: 40px;
+  opacity: 1;
+}
+
+
+@media screen and (max-width:800px) {
+  .contact-info{
+    flex-direction: column;
+  }
+  .card{
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+  }
+}
+
+.land{
+display: flex;
     width: 100%;
     height: 100vh;
     background: rgb(0, 0, 0);
     position: relative;
     overflow: hidden;
 }
-.land::after{
 
-content: "";
+
+.land::after{
+display: flex;
+content: " ";
 position:absolute;
 left:0;
 top:0;
 width:100%;
-height: 100%;
+height:100%;
 background-image: url(../img/Radio.jpg);
 background-repeat: no-repeat; 
 background-size: cover;
 opacity: 0.2;
 animation: anim 25s infinite;
 }
-/* base da lading page, imagem e efeitos */
-
 @keyframes anim {
   50%{
     transform: scale(2);
@@ -64,12 +291,11 @@ animation: anim 25s infinite;
   100% { opacity: 1; }
   }
 
-
   .fadeIn {
   
     animation: fadeIn 3s ease-in-out;
     }
-/* Botão e estilos referentes */
+
 .conteudo{
   position: absolute;
   top:50%;
@@ -85,7 +311,7 @@ animation: anim 25s infinite;
 
 .conteudo h1{
 text-transform: uppercase;
-color: rgb(213, 116, 116);
+color: rgb(248, 248, 248);
 font-size: 45px;
 font-weight: 900;
 margin-bottom: 20px;
@@ -93,7 +319,7 @@ text-shadow: #000 2px 2px 3px;
 }
 .conteudo p{
   font-weight: bolder;
-color: azure;
+color: rgba(213, 116, 116, 0.753);
 margin-bottom: 20px;
 
 }
@@ -103,29 +329,67 @@ margin-bottom: 20px;
 display: inline-block;
 text-decoration: none;
 outline: none;
-color: rgb(213, 116, 116);
-border:2px solid rgb(213, 116, 116);
-padding: 5px;
-text-transform: uppercase;
-transition: 0.4s linear;
-font-size: 18px;
-
+  margin: 20px;
+  padding: 24px;
+  width: 220px;
+  font-family: "montserrat",sans-serif;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  background-size: 200%;
+  transition: 0.6s;
 
 }
 
 .conteudo a:hover{
   color: azure;
-  background-image: linear-gradient(rgb(213, 116, 116), rgb(214, 95, 95)) ;
-  border: 2px solid;
-  border-image-source: linear-gradient(1deg, rgb(226, 136, 104), rgb(213, 112, 75));
+  background-image: linear-gradient(to left,#FFC312,#EE5A24,#FFC312);
+  
 }
-
-/* Botão e estilos referentes */
-
 
 .text{
 
 padding: 10px;
 text-align: justify;
 }
+::-webkit-scrollbar{
+
+background: #ddd;
+width: 14px;
+
+}
+
+::-webkit-scrollbar-track{
+  box-shadow:inset 0 0 10px #00000070;
+  border-radius: 10px;
+
+
+}
+::-webkit-scrollbar-thumb{
+
+background: linear-gradient(125deg,#3498db,#34495e);
+border-radius: 10px;
+
+}
+
+
+
+
+.info{
+  display: flex;
+  position: absolute;
+left :1250px;
+top: 800px;
+}
+
+
+
+
+
+
+
+
+
+
 

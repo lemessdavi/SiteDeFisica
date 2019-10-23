@@ -1,35 +1,90 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" dir="ltr">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>welcome</title>
+  <title>Conversor</title>
   <link rel="stylesheet" href="index.html">
   <link rel="stylesheet" href="css/welcomePage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+  <link href="img/icon6.png" rel="icon" type="image/x-icon" />
+
 </head>
 
 <body class="fadeIn">
+  
+    
 <div class="land">
+    <div class="neon-wrapper">
+        <div class="neon-text">EM <br> BREVE</div>
+   </div>
+<div class="info">
+  
+  <div class="contact-info">
+      <div class="card">
+        <i class="card-icon far fa-envelope" onclick="window.open('https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSKhbwdxvFhgsgjRVxqrKwplgqzqmkRhjZWxNJgSBGghplxDMKRklvtqmznGNgHxLTdXfhxH')"></i>
+        <p>E-mail support</p>
+      </div>
+
+      <div class="card">
+        <i class="card-icon fas fa-phone"></i>
+        <p>000000000000</p>
+      </div>
+    
+      <div class="card">
+        <i class="card-icon fas fa-map-marker-alt" onclick="window.open('https://www.google.com/maps/place/Ac.+Senai+-+Distrito+Industrial,+S%C3%A3o+Jos%C3%A9+-+SC,+88104-770/data=!4m2!3m1!1s0x952735e58cf842b1:0x1362caae746b3f6?sa=X&ved=2ahUKEwiLoLj5vrHlAhWdIbkGHUagDDgQ8gEwAHoECAoQAQ')"></i>
+        <p>SENAI,São José, SC</p>
+      </div>
+    </div>
+</div>
+
+
 <div class="conteudo">
-
 <h1> Projeto Conversor</h1>
-<p>
-    cajbncsabschjabchjba
-</p>
+<div class="text-anim">
+
+    <div class="linha">Bem-vindo</div>
+    <div class="linha">Ao nosso</div>
+    <div class="linha">Projeto</div>
+
+</div>
 
 
-<a href="bootstrap-4.1.3/index.html"> Entrar </a>
+
+
+
 </div>
 </div>
 
+<div class="container">
+
+    <button class="open open1" onclick="window.location.href='bootstrap-4.1.3/index.html'">Entrar</button> 
+
+</div>
+<nav role='navigation' id="mainnav">
+    <br><br><br>
+  <ul class="gap">
+      <li><a href="#?">Login</a></li>
+      <li><a href="#?" onclick="window.open('https://discordapp.com/invite/ZMrZuy')" >Discord</a></li>
+      <li><a href="developers.html">Desenvolvedores</a></li>
+      <li><a href="#?" onclick="window.open('http://sc.senai.br/')">SENAI</a></li>
+ 
+</nav>  
+
+<div class="hamb">
+  <a href="#"><i class="fa fa-bars"></i></a>
+</div>
 
 
+<canvas id="bubble"></canvas>
 
 
-
-
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
+<script src="js/particulas.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@ function calcular(t, valor) {
     inCe= document.getElementById('celc');
     inKe= document.getElementById('kelvin');
     inFa= document.getElementById('fare');
-    if(t == 'c'&&temp>=-273.15 ){// Variável t se refere a qual o input que entro o valor
+    if(t == 'c'&&temp>=-273.15 ){
         inKe.value = Convercor.celciusToKelvin(temp);
         inFa.value = Convercor.celciusToFahrenheit(temp);
     }else if(t== 'k'&& temp>=0){
@@ -22,15 +22,8 @@ function calcular(t, valor) {
         inKe.value = Convercor.fahrenheitToKelvin(temp);
 
 
-    }else if(!Number.isNaN(temp)){//alert personalizado e verificação se o valor numero foi inserido para se poder ser dito que o valor é invalido
-        var body = document.querySelector("#corpo");
-        var alert = document.createElement('div');
-        alert.setAttribute('class', 'alert');
-        alert.appendChild(document.createTextNode("Valor Invalido"));
-        body.appendChild(alert);
-        setTimeout(function(){
-            body.removeChild(alert);
-        }, 3000);
+    }else{
+        alert("Valor Invalido");
     }
 }
 
