@@ -15,6 +15,15 @@
     font-weight: 400;
     font-style: normal;
 }
+@font-face {
+  font-family: neon;
+  src: url(hellodenverdisplayregular_v1.6.ttf);
+}
+
+@font-face {
+  font-family: neon;
+  src: url(hellodenverdisplayregular_v1.6.ttf);
+}
 
 
 *{
@@ -94,38 +103,6 @@ body{
     margin-top: -180px;
   }
   
-}
-@font-face {
-  font-family: neon;
-  src: url(hellodenverdisplayregular_v1.6.ttf);
-}
-.wrapper {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(wall.jpg);
-  background-size: auto 100%;
-}
-
-@font-face {
-  font-family: neon;
-  src: url(hellodenverdisplayregular_v1.6.ttf);
-}
-
-.neon-text {
-  position: absolute;
-  left: 90%;
-  font-family:neon;
-  font-size: 3rem;
-  color: #ffd8d8;
-  text-shadow: 
-  .1vw 0vw .25vw #ffd8d8, .2vw 0vw .25vw #ffd8d8, .4vw 0vw .25vw #ffd8d8, 
-  .1vw 0vw   0vw #f25757, .2vw 0vw   0vw #f25757, .4vw 0vw   0vw #f25757,
-  .1vw 0vw  .1vw #f25757, .2vw 0vw  .1vw #f25757, .4vw 0vw  .1vw #f25757,
-  .1vw 0vw   2vw #f25757, .2vw 0vw   2vw #f25757, .4vw 0vw   2vw #f25757, 
-  .1vw 0vw   1vw #e50b0b, .2vw 0vw   1vw #e50b0b, .4vw 0vw   5vw #e50b0b;
 }
 #mainnav {
   position: absolute;
