@@ -270,9 +270,56 @@ animation: anim 25s infinite;
 
   .fadeIn {
   
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out;
     }
+.land a{
+position: absolute;
+top: 5%;
+left: 93%;
+transform: translate(-50%,-50%);
+width: 200px;
+height: 60px;
+text-align: center;
+line-height: 60px;
+color:#fff;
+font-size: 20px;
+text-transform: uppercase;
+text-decoration: none;
+font-family: consolas;
+box-sizing:border-box;
+background: linear-gradient(90deg,#304ffa, #f441a5,#b9f514,#0343f4);
+background-size:400%;
+border-radius: 30px;
+}
+.land a{
 
+animation:animate 8s linear infinite;
+}
+@keyframes animate
+{
+  0%
+  {
+    background-position: 0%;
+}
+100%
+{
+  background-position: 400%;
+}
+}
+.land a::before{
+content:'';
+position: absolute;
+top: -5px;
+left: -5px;
+right: -5px;
+bottom: -5px;
+z-index: -1;
+background: linear-gradient(90deg,#2b6bf5, #f441a5,#3bff9d,#1c55ce);
+background-size:400%;
+border-radius: 40px;
+filter: blur(10px);
+
+}
 .conteudo{
   position: absolute;
   top:50%;
