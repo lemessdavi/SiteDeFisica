@@ -19,13 +19,10 @@
   font-family: neon;
   src: url(hellodenverdisplayregular_v1.6.ttf);
 }
-
 @font-face {
   font-family: neon;
   src: url(hellodenverdisplayregular_v1.6.ttf);
 }
-
-
 *{
 
   font-family: 'Montserrat', sans-serif;
@@ -47,8 +44,8 @@ body{
 }
 .open{
   border: none;
-  margin: 20px;
-  padding: 24px;
+  margin: 1%;
+  padding: 10%;
   width: 220px;
   font-family: 'Montserrat',sans-serif;
   font-size:15px;
@@ -104,6 +101,9 @@ body{
   }
   
 }
+
+
+
 #mainnav {
   position: absolute;
   font-family: 'Roboto Condensed', sans-serif;
