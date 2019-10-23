@@ -53,20 +53,20 @@ body{
   box-shadow:3px 3px;
   border-radius: 6px;
   cursor: pointer;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.795);
   background-size: 200%;
   transition: 0.6s;
   z-index: 3;
 }
 .open1{
-  background-image: linear-gradient(to left,rgba(158, 36, 77, 0.753),rgba(213, 116, 116, 0.753),rgba(141, 31, 31, 0.753));
+  background-image: linear-gradient(to left,#304ffa, #f441a5,#0343f4);
   z-index: 3;
 }
 .open:hover{
   background-position: right;
 }
 .text-anim{
-  color: rgba(213, 116, 116, 0.753);
+  color: #ffffff;
   position: absolute;
   top: 100%;
   left: 50%;
@@ -185,7 +185,7 @@ ul li{
 
 .card-icon{
   font-size: 28px;
-  background: rgba(213, 116, 116, 0.753);
+  background: #ca14f74b;
   width: 50%;
   height: 60px;
   text-align: center;
@@ -196,7 +196,7 @@ ul li{
 
 .card:hover .card-icon{
   background: none;
-  color: rgba(213, 116, 116, 0.753);
+  color: rgba(0, 119, 255, 0.685);
   transform: scale(1.6);
 }
 
