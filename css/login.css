@@ -1,70 +1,108 @@
-
-
-body{
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-color: #34495e ;
-
+.login-div {
+  width:430px;
+  height: 700px;
+  padding: 60px 35px 35px 35px;
+  border-radius: 10px;
+  background: radial-gradient(circle, #555555, #535353, #505050, #4e4e4e, #4c4c4c);
 }
 
-.box{
-  width: 300px;
-  padding: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  background: #191919;
+.titulo {
   text-align: center;
-  border-radius: 20px;
+  font-size: 28px;
+  padding-top:24px;
+  letter-spacing: 0.5px;
 }
-.box h1{
-  color: white;
+.sub-titulo {
+  text-align: center;
+  font-size:15px;
+  padding-top: 7px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: bold;
 }
-.box input[type = "text"],.box input[type = "password"]{
-  border:0;
-  background: none;
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-  border: 2px solid #3498db;
-  padding: 14px 10px;
-  width: 200px;
+
+.fields{
+  width: 100%;
+  padding: 100px 5px 30px 5px;
+}
+.fields input {
+  border: none;
   outline: none;
-  color: white;
-  border-radius: 24px;
-  transition: 0.25s;
-}
-.box input[type = "text"]:focus,.box input[type = "password"]:focus{
-  width: 280px;
-  border-color: #be15f1;
-}
-.box input[type = "submit"]{
-  border:0;
   background: none;
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-  border: 2px solid #be15f1;
-  padding: 14px 40px;
-  outline: none;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
   color: white;
-  border-radius: 24px;
-  transition: 0.25s;
+  padding: 10px 10px 10px 5px;
+}
+.username, .password {
+  display: block;
+  border-bottom: 1px solid #b3b3b3;
+  margin-bottom: 30px;
+}
+
+::placeholder  { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: 1; /* Firefox */
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.signin-button {
+  outline: none;
+  border: none;
   cursor: pointer;
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  font-size: 22px;
+  font-family: 'Lato', sans-serif;
+  color:white;
+  text-align: center;
+  letter-spacing: 1px;
+  background: radial-gradient(circle, #24cfaa, #26c5a3, #28bb9c, #29b294, #2aa88d);
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
-.box input[type = "submit"]:hover{
-  background: #be15f1;
+
+.link {
+  padding-top: 20px;
+  text-align: center;
 }
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+.link a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.fields svg {
+  height: 22px;
+  margin-bottom: -3px;
+  margin-right: 10px;
+}
+
+.login-div {
+    filter: blur(0.4px);
+    box-shadow:
+    /*bottom shadow*/
+    0px 20px 20px rgba(0,0,0,0.2),
+    0px 5px 10px rgba(0,0,0,0.2),
+    /*long bottom shadow*/
+    0px 70px 50px rgba(0,0,0,0.4),
+    /*right shadow*/
+    30px 50px 50px rgba(0,0,0,0.2),
+    /*left shadow*/
+    -30px 50px 50px rgba(0,0,0,0.2),
+    /*right inset*/
+    inset 20px 0px 60px rgba(0,0,0,0.1),
+    /*left inset*/
+    inset -20px 0px 60px rgba(0,0,0,0.1);
   }
 
-  .fadeIn {
+  body {
   
-    animation: fadeIn 0.5s ease-in-out;
+      background:linear-gradient(to left bottom, #e9e9e9, #ebebeb, #d6d6d6, #b1b1b1, #505050);
     }
