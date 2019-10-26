@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
+  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,76 @@
     <titulo>Login</titulo>
     <link rel="stylesheet" href="../css/login.css">
     <link href="../img/icon6.png" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+   
+  
 </head>
 <body  class="fadeIn">
-        <div class="login-div">
-        <div class="logo"></div>
-        <div class="titulo">Login</div>
-        <div class="sub-titulo">Alpha</div>
-        <div class="fields">
-          <div class="username"><input type="username" class="user-input" placeholder="Username" /></div>
-          <div class="password"><input type="password" class="pass-input" placeholder="Password" /></div>
-        </div>
-        <button class="signin-button">Entrar</button>
-        <div class="link"><a href="#">Esqueceu a senha?</a></div>
+    <div class="menu">
+        <div onclick="location.href='../Welcome.html'" class="label" ><i onclick="location.href='../Welcome.html'" class="fas fa-home fa-2x"></i> Home</div>
+        <div class="spacer"></div>
+        <div class="item"><span onclick="location.href='#'">Conversores</span></div>
+        <div class="item"><span onclick="location.href='#'" >Contato</span></div>
+        <div class="item"><span>Coming soon</span></div>
+        <div class="item"><span>Coming soon</span></div>
+        <div class="item"><span>Coming soon</span></div>
       </div>
+  <h2>Seja bem vindo a OKEN!</h2>
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form >
+        <h1>Criar uma conta</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>Usar email</span>
+        <input type="text" placeholder="Nome" />
+        <input type="email" placeholder="Email" />
+        <input type="senha" placeholder="Senha" />
+        <button>Cadastrar-se</button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form action="#">
+        <h1>Entrar</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>Usar sua conta</span>
+        <input type="email" placeholder="Email" />
+        <input type="senha" placeholder="senha" />
+        <a href="#">Esqueceu sua senha?</a>
+        <button onclick="window.open('../Welcome.html')">Entrar</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Bem-vindo de volta</h1>
+          <p>Login para mais informações ou contato</p>
+          <button class="ghost" id="signIn">Entrar</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Olá</h1>
+          <p>Faça parte da equipe</p>
+          <button class="ghost" id="signUp">Cadastre-se</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/login.js"></script>
+  <footer>
+    <p></p>
+      Criado por <i class="fa fa-heart"></i>
+      <a target="_blank">João Cristiano</a> - 
+      Conheça mais sobre os desenvolvedores
+      <a target="_blank" href="../bootstrap-4.1.3/developers.html">aqui</a>.
+    </p>
+  </footer>
       
 </body>
 </html>
