@@ -26,45 +26,284 @@ function tempLoad () {
   
   
 
-  document.getElementById('farInput').addEventListener('input', function(e) {
+
+function formPeso() {
+  var mas = parseFloat(document.getElementById('forM').value);
+  var ace = parseFloat(document.getElementById('forA').value);
+  var pes = parseFloat(document.getElementById('forP').value);
+  
+  if(mas >0 && ace > 0){
+    
+    document.getElementById('forP').value = (mas*ace).toFixed(2);
+    document.getElementById('forM').value = null;
+    document.getElementById('forA').value = null;
+  }else if(mas>0&&pes>0){
+    
+    document.getElementById('forA').value = (pes/mas).toFixed(2);
+    document.getElementById('forM').value = null;
+    document.getElementById('forP').value = null;
+  }else if(ace>0&&pes>0){
+    
+    document.getElementById('forM').value = (pes/ace).toFixed(2);
+    document.getElementById('forP').value = null;
+    document.getElementById('forA').value = null;
+  }
+
+}
+function formVeloc(){
+  var dis = parseFloat(document.getElementById('forD').value);
+  var tem = parseFloat(document.getElementById('forT').value);
+  var vel = parseFloat(document.getElementById('forV').value);
+  
+  if(dis >0 && tem > 0){
+    
+    document.getElementById('forV').value = (dis/tem).toFixed(2);
+    document.getElementById('forD').value = null;
+    document.getElementById('forT').value = null;
+  }else if(dis>0&&vel>0){
+    
+    document.getElementById('forT').value = (dis/vel).toFixed(2);
+    document.getElementById('forD').value = null;
+    document.getElementById('forV').value = null;
+  }else if(tem>0&&vel>0){
+    
+    document.getElementById('forD').value = (vel*tem).toFixed(2);
+    document.getElementById('forT').value = null;
+    document.getElementById('forV').value = null;
+  }
+
+}
+function formAcel(){
+  var vaDv = parseFloat(document.getElementById('forVDV').value);
+  var tem = parseFloat(document.getElementById('forT2').value);
+  var ace = parseFloat(document.getElementById('forA2').value);
+  
+  if(vaDv >0 && tem > 0){
+    //console.log(vaDv/tem)
+    document.getElementById('forA2').value = (vaDv/tem).toFixed(2);
+    document.getElementById('forVDV').value = null;
+    document.getElementById('forT2').value = null;
+    
+  }else if(vaDv>0&&ace>0){
+    
+    document.getElementById('forT2').value = (vaDv/ace).toFixed(2);
+    document.getElementById('forA2').value = null;
+    document.getElementById('forVDV').value = null;
+  }else if(tem>0&&ace>0){
+    
+    document.getElementById('forVDV').value = (ace*tem).toFixed(2);
+    document.getElementById('forT2').value = null;
+    document.getElementById('forA2').value = null;
+  }
+
+}
+
+function formGrauss(){
+  var p = (document.getElementById('forPO').value);
+  var pL = (document.getElementById('forPL').value);
+  var f = (document.getElementById('forFO').value);
+ 
+  if(p != 0 && pL != 0){
+    if(p<0){
+      alert("Os calculos tornam inviavel a distancia entre o espelho e o objeto");
+      document.getElementById('forPL').value = null;
+      document.getElementById('forFO').value = null;
+      document.getElementById('forPO').value = null;
+    }else{
+      document.getElementById('forFO').value = (1/((1/p)+(1/pL))).toFixed(2);
+      document.getElementById('forPL').value = null;
+      document.getElementById('forPO').value = null;
+    }
+  }else if (f != 0 && p != 0){
+    if(p<0){
+      alert("Os calculos tornam inviavel a distancia entre o espelho e o objeto");
+      document.getElementById('forPL').value = null;
+      document.getElementById('forFO').value = null;
+      document.getElementById('forPO').value = null;
+    }else{
+      pL = (1/((1/f)-(1/p))).toFixed(2);
+      document.getElementById('forPL').value = pL;
+      document.getElementById('forFO').value = null;
+      document.getElementById('forPO').value = null;
+    }
+    
+  }else if(f != 0 && pL != 0){
+    if(p<0){
+      alert("Os calculos tornam inviavel a distancia entre o espelho e o objeto");
+      document.getElementById('forPL').value = null;
+      document.getElementById('forFO').value = null;
+      document.getElementById('forPO').value = null;
+    }else{
+      document.getElementById('forPO').value = (1/((1/f)-(1/pL))).toFixed(2);
+      document.getElementById('forFO').value = null;
+      document.getElementById('forPL').value = null;
+    }
+   
+  }
+  if(pL>0){
+    document.getElementById('tiIm').innerHTML = "Imagem Real(Fora do Espelho)";
+   }else if(pL<0) {
+    document.getElementById('tiIm').innerHTML = "Imagem Virtual(Dentro do Espelho)";
+   }
+
+
+
+}
+
+
+function auLinear(){
+  var i = (document.getElementById('forI').value);
+  var o = (document.getElementById('forO').value);
+  var a = (document.getElementById('forAu').value);
+
+  if(i != 0 && o != 0){
+
+    document.getElementById('forAu').value = (i/o).toFixed(2);
+    document.getElementById('forI').value = null;
+    document.getElementById('forO').value = null;
+    
+  }else if(a!=0&&i!=0){
+    
+    document.getElementById('forO').value = (i/a).toFixed(2);
+    document.getElementById('forAu').value = null;
+    document.getElementById('forI').value = null;
+  }else if(a!=0&&o!=00){
+    
+    document.getElementById('forI').value = (a/o).toFixed(2);
+    document.getElementById('forAu').value = null;
+    document.getElementById('forO').value = null;
+  }
+}
+
+function auLinear2(){
+  var pl = (document.getElementById('forPL2').value);
+  var p = (document.getElementById('forPO2').value);
+  var a = (document.getElementById('forAu2').value);
+
+  if(pl != 0 && p != 0){
+
+    document.getElementById('forAu2').value = (-pl/p).toFixed(2);
+    document.getElementById('forPL2').value = null;
+    document.getElementById('forPO2').value = null;
+    
+  }else if(a!=0&&pl!=0){
+    
+    document.getElementById('forPO2').value = (-pl/a).toFixed(2);
+    document.getElementById('forAu2').value = null;
+    document.getElementById('forPL2').value = null;
+  }else if(a!=00&&p!=00){
+    
+    document.getElementById('forPL2').value = (-1*(a/p)).toFixed(2);
+    document.getElementById('forAu2').value = null;
+    document.getElementById('forPO2').value = null;
+  }
+}
+
+function auLinear3(){
+  var pl = (document.getElementById('forPL3').value);
+  var p = (document.getElementById('forPO3').value);
+  var i = (document.getElementById('forI2').value);
+  var o = (document.getElementById('forO2').value);
+  if(pl != 0 && p != 0 && i != 0){
+
+    document.getElementById('forO2').value = (i/(-pl/p)).toFixed(2);
+    document.getElementById('forPL3').value = null;
+    document.getElementById('forPO3').value = null;
+    document.getElementById('forI2').value = null;
+    
+  }else if(pl != 0 && p != 0 && o != 0){
+    
+    document.getElementById('forI2').value = ((-pl/p)*o).toFixed(2);
+    document.getElementById('forPL3').value = null;
+    document.getElementById('forPO3').value = null;
+    document.getElementById('forO2').value = null;
+  }else if(o != 0 && p != 0 && i != 0){
+    
+    document.getElementById('forPL3').value = (((i/o)*p)*-1).toFixed(2);
+    document.getElementById('forO2').value = null;
+    document.getElementById('forPO3').value = null;
+    document.getElementById('forI2').value = null;
+  }else if(pl != 0 && o != 0 && i != 0){
+    
+    document.getElementById('forPO3').value = (-pl/(i/o)).toFixed(2);
+    document.getElementById('forPL3').value = null;
+    document.getElementById('forO2').value = null;
+    document.getElementById('forI2').value = null;
+  }
+}
+
+
+document.getElementById('farInput').addEventListener('input', function(e) {
   
    
-    let far = e.target.value;
-    
-      var a = ((5/9)*((far*1)-32)).toFixed(2);
-      if(isNaN(a)){
-    
-    
-        alert("das");
-      }else{document.getElementById('farToCel').innerHTML = a}
+  var far = e.target.value;
+  
+    var a = ((5/9)*((far*1)-32)).toFixed(2);
+    var b = ((5/9)*((far*1)+459.67)).toFixed(2);
+    if(far < -459.40){
+      alert("valor inesistente");
+      //document.getElementById('farInput').value = 0;
+    }else{
+      if(isNaN(a) && far !="-" && far != "+"){
+        //console.log(far);
+  
+        alert("Caracter não reconhecivel");
+      }else{
+        document.getElementById('farToCel').innerHTML = a;
+        document.getElementById('farToKel').innerHTML = b;
+      }
+    }
+});
 
-    document.getElementById('farToKel').innerHTML = ((5/9)*((far*1)+459.67)).toFixed(2);
-    
-  });
-
-  document.getElementById('celInput').addEventListener('input', function(e) {
-    
- 
-    let cel = e.target.value;
-
-    document.getElementById('celToFar').innerHTML = ( (cel*1.8) + 32).toFixed(2);
-    
-
-    document.getElementById('celToKel').innerHTML = ( (cel*1) + 273.15).toFixed(2);
-    
-  });
+document.getElementById('celInput').addEventListener('input', function(e) {
   
 
-  document.getElementById('kelInput').addEventListener('input', function(e) {
-    
+  var cel = e.target.value;
+  var a = ( (cel*1.8) + 32).toFixed(2);
+  var b = ( (cel*1) + 273.15).toFixed(2);
 
-    let kel = e.target.value;
+  if(cel < -273.15){
+    alert("valor inesistente");
+    //document.getElementById('farInput').value = 0;
+  }else{
+    if(isNaN(a) && cel !="-" && cel != "+"){
+      //console.log(cel);
 
-    document.getElementById('kelToFar').innerHTML = ( 1.8*((kel*1)-273) + 32).toFixed(2);
- 
-    document.getElementById('kelToCel').innerHTML = ((kel*1)-273.15).toFixed(2);
-    
-  });
+      alert("Caracter não reconhecivel");
+    }else{
+      document.getElementById('celToFar').innerHTML = a;
+      document.getElementById('celToKel').innerHTML = b;
+    }
+  }
+  
+  
+});
+
+
+document.getElementById('kelInput').addEventListener('input', function(e) {
+  
+
+  var kel = e.target.value;
+  var a = ( 1.8*((kel*1)-273) + 32).toFixed(2);
+  var b = ((kel*1)-273.15).toFixed(2);
+
+  if(kel < 0){
+    alert("valor inesistente");
+    //document.getElementById('farInput').value = 0;
+  }else{
+    if(isNaN(a) && kel !="-" && kel != "+"){
+      //console.log(kel);
+
+      alert("Caracter não reconhecivel");
+    }else{
+      document.getElementById('kelToFar').innerHTML = a;
+      document.getElementById('kelToCel').innerHTML = b;
+    }
+  }
+  
+  
+});
+
   var xmlns = "http://www.w3.org/2000/svg",
   xlinkns = "http://www.w3.org/1999/xlink",
   select = function(s) {
@@ -169,5 +408,6 @@ TweenMax.to(dragger, 1.4, {
  onUpdate:onUpdate,
  ease:Expo.easeInOut
 })
+
 
 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Projeto site</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="../img/icon6.png" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+
+
+
+
+<body class="fadeIn">
+  
+    <div class="menus">
+        <div onclick="location.href='../Welcome.html'" class="label" ><i onclick="location.href='../Welcome.html'" class="fas fa-home fa-2x"></i> Home</div>
+        <div class="spacer"></div>
+        <div class="item"><span onclick="location.href='conversor.html'">Conversores</span></div>
+        <div class="item"><span onclick="location.href='otica.html'">Calculos Espelhos Esfericos</span></div>
+        <div class="item"><span onclick="location.href='formularFisicas.html'">Formulas Fisicas</span></div>
+        <div class="item"><span onclick="location.href='developers.html'" >Contato</span></div>
+        <div class="item"><span>Coming soon</span></div>
+      </div>
+      <div class="container">
+
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="display-4 text-center mb-4 app-title">Formulas Fisicas<span id="temp" class="fa"></span></h1>
+        
+              <div class="input-group input-group-lg">
+                <h5>Calculo de Peso</h2>
+                <label class="sr-only" for=""></label>
+                <input id="forM" class="form-control" onchange="formPeso()" placeholder="Digite a Massa(>0)">
+                <div class="input-group-addon starter">*</div>
+                <input id="forA" class="form-control" onchange="formPeso()" placeholder="Digite a Aceleração(>0)">
+                <div class="input-group-addon starter">=</div>
+                <input id="forP" class="form-control" onchange="formPeso()" placeholder="Digite o Peso(>0)">
+                
+              </div>
+        
+              <div class="input-group input-group-lg">
+                    <h5>Calculo de Velocidade</h2>
+                    <label class="sr-only" for=""></label>
+                    <input id="forD" class="form-control" onchange="formVeloc()" placeholder="Digite a Distancia(>0)">
+                    <div class="input-group-addon starter">/</div>
+                    <input id="forT" class="form-control" onchange="formVeloc()" placeholder="Digite o Tempo(>0)">
+                    <div class="input-group-addon starter">=</div>
+                    <input id="forV" class="form-control" onchange="formVeloc()" placeholder="Digite a Velociade(>0)">
+              </div>
+        
+              <div class="input-group input-group-lg">
+                    <h5>Calculo de Aceleração</h2>
+                    <label class="sr-only" for=""></label>
+                    <input id="forVDV" class="form-control" onchange=" formAcel()" placeholder="Digite a Var. Veloc.(>0)">
+                    <div class="input-group-addon starter">/</div>
+                    <input id="forT2" class="form-control" onchange=" formAcel()" placeholder="Digite o Tempo(>0)">
+                    <div class="input-group-addon starter">=</div>
+                    <input id="forA2" class="form-control" onchange=" formAcel()" placeholder="Digite a Aceleração(>0)">
+              </div>
+        
+            </div>
+          </div>
+         
+        
+        </div>
+     
+        
+
+        <script src="../js/script.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
