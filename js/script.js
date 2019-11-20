@@ -19,7 +19,7 @@ function tempLoad () {
     }, 4000);
     
   }
-  
+   
   tempLoad();
   
   setInterval(tempLoad, 5000);
@@ -31,9 +31,12 @@ function tempLoad () {
    
     let far = e.target.value;
     
-
-    document.getElementById('farToCel').innerHTML = ((5/9)*((far*1)-32)).toFixed(2);
+      var a = ((5/9)*((far*1)-32)).toFixed(2);
+      if(isNaN(a)){
     
+    
+        alert("das");
+      }else{document.getElementById('farToCel').innerHTML = a}
 
     document.getElementById('farToKel').innerHTML = ((5/9)*((far*1)+459.67)).toFixed(2);
     
