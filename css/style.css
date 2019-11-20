@@ -21,7 +21,53 @@
     
       animation: fadeIn 0.5s ease-in-out;
       }
+      .inform  {
+        position: absolute;
+        background-color: #cac9c98f;
+border:10px 10px 10px #000000;
+padding:0.8em 0.8em 0.3em 0.8em;
+border-radius: 5px;
+margin-top:2em;
+margin:0;
+width:100%;
+  height:65%;
+  top: 100%;
+  box-shadow:         9px 7px 5px 10px rgb(121, 120, 120);
+
+}
+.inform h1{
+  font-size: 20px;
+
   
+  }
+  .inform h2{
+    font-size: 20px;
+  
+    
+    }
+    .inform h3{
+      font-size: 20px;
+    
+      
+      }
+      .inform h4{
+        font-size: 20px;
+      
+        
+        }
+        .inform h5{
+          font-size: 20px;
+        
+          
+          }
+          .inform h6{
+            font-size: 20px;
+          
+            
+            }
+  a{
+    background-color: #ff0000;
+  }
   .menus {
     z-index: 3;
     text-transform: uppercase;
