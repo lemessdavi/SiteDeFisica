@@ -210,15 +210,18 @@ top: 150px;
     color: rgb(0, 0, 0);
   }
   
-  .input-group {
+  .input-group .input-group-lgg{
     margin-bottom: 1px;
     height: 80px;
-    
+    padding: 30px;
   }
-  
+
+
+
+    
   .form-control {
     border-radius: 0.5em 0 0 0.5em !important;
-    width: 50%;
+    width: 100%;
     padding: 0 16px !important;
     margin: 30px;
   
