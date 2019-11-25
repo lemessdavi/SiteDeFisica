@@ -1,5 +1,7 @@
 
-// Animated Thermometer
+// CONVERSOR DE TEMPERATURA: LINHA 250
+
+
 
 function tempLoad () {
     let temp = document.getElementById('temp');
@@ -26,7 +28,7 @@ function tempLoad () {
   
   
 
-
+// Calculo de peso
 function formPeso() {
   var mas = parseFloat(document.getElementById('forM').value);
   var ace = parseFloat(document.getElementById('forA').value);
@@ -49,6 +51,8 @@ function formPeso() {
     document.getElementById('forA').value = null;
   }
 
+
+//Calculo de Velocidade
 }
 function formVeloc(){
   var dis = parseFloat(document.getElementById('forD').value);
@@ -72,6 +76,9 @@ function formVeloc(){
     document.getElementById('forV').value = null;
   }
 
+
+
+  // Calculo de aceleração
 }
 function formAcel(){
   var vaDv = parseFloat(document.getElementById('forVDV').value);
@@ -98,6 +105,9 @@ function formAcel(){
 
 }
 
+
+
+// Fromula de Gauss
 function formGrauss(){
   var p = (document.getElementById('forPO').value);
   var pL = (document.getElementById('forPL').value);
@@ -151,6 +161,8 @@ function formGrauss(){
 }
 
 
+
+// Calculo de aumento linear
 function auLinear(){
   var i = (document.getElementById('forI').value);
   var o = (document.getElementById('forO').value);
@@ -174,6 +186,9 @@ function auLinear(){
     document.getElementById('forO').value = null;
   }
 }
+
+
+// Calculo de aumento linear ( outra versão )
 
 function auLinear2(){
   var pl = (document.getElementById('forPL2').value);
@@ -199,6 +214,8 @@ function auLinear2(){
   }
 }
 
+
+// Calculo de aumento linear ( mais uma versão )
 function auLinear3(){
   var pl = (document.getElementById('forPL3').value);
   var p = (document.getElementById('forPO3').value);
@@ -233,6 +250,10 @@ function auLinear3(){
 }
 
 
+
+
+
+// Conversor de Fahrenheit para Celsius e Kelvin. 
 document.getElementById('farInput').addEventListener('input', function(e) {
   
    
@@ -255,6 +276,10 @@ document.getElementById('farInput').addEventListener('input', function(e) {
     }
 });
 
+
+
+
+// Conversor de Celsius para Fahrenheit e Kelvin
 document.getElementById('celInput').addEventListener('input', function(e) {
   
 
@@ -280,6 +305,9 @@ document.getElementById('celInput').addEventListener('input', function(e) {
 });
 
 
+
+
+// Conversor de Kelvin para Fahrenheit e Celsius
 document.getElementById('kelInput').addEventListener('input', function(e) {
   
 
@@ -303,6 +331,11 @@ document.getElementById('kelInput').addEventListener('input', function(e) {
   
   
 });
+///////////////////////////////////////////////////
+
+
+
+
 
   var xmlns = "http://www.w3.org/2000/svg",
   xlinkns = "http://www.w3.org/1999/xlink",
